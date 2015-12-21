@@ -1,5 +1,5 @@
 <?php
-
+namespace DesignPatterns\Creational\Singleton;
 /**
  * Singleton
  */
