@@ -86,5 +86,6 @@ echo $seminar->cost().' '.$seminar->chargeType();
 <p>შედეგი : </p>
 <hr />
 30 ფიქსირებული გადახდა
+<br />
 15 საათობრივი გადახდა
 <hr />
