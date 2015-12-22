@@ -65,4 +65,26 @@ abstract class Lesson {
     }
 // Lesson კლასის სხვა მეთოდები ...
 }
+
+class Lecture extends Lesson {
+ // ლექციისთვის განკუთვნილი სხვა ფუნქციონალი
+}
+
+class Seminar extends Lesson {
+ // სემინარისთვის განკუთვნილი სხვა ფუნქციონლაი
+}
 ```
+<p>და აი როგორ უნდა ვიმუშავოთ ამ კლასებთან : </p>
+```php
+$lecture = new Lecture(5, Lesson::FIXED);
+echo $lecture->cost().' '.$lecture->chargeType();
+
+$seminar = new Seminar(3, Lesson::TIMED);
+echo $seminar->cost().' '.$seminar->chargeType();
+
+```
+<p>შედეგი : </p>
+<hr />
+30 ფიქსირებული გადახდა
+15 საათობრივი გადახდა
+<hr />
