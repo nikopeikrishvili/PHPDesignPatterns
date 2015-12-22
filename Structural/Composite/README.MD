@@ -27,7 +27,42 @@
  პრინციპებს, აი როგორ გამოყურება ჩვენი კოდი თუ შემოვიტანთ პირობით ოპერატორებს:
 </p>
 ```PHP
-abstract class Lesson{
-protected $duration;
+abstract class Lesson {
+protected   $duration;
+const       FIXED = 1;
+const       TIMED = 2;
+private     $costType;
+
+public function __construct($duration,$constType=1) {
+    $this->duration = $duration;
+    $this->costType = $constType;
+}
+public function cost() {
+    switch($this->costType) {
+        case  SELF::TIMED :
+          return (5 * $this->duration);
+          break;
+        case SELF::FIXED :
+          return 30;
+          break;
+        default :
+          $this->costType = SELF::FIXED;
+          return 30;
+    }
+}
+public function chargeType() {
+    switch($this->costType) {
+        case  SELF::TIMED :
+          return "საათობრივი გადახდა";
+          break;
+        case SELF::FIXED :
+          return "ფიქსირებული გადახდა";
+          break;
+        default :
+          $this->costType = SELF::FIXED;
+          return "ფიქსირებული გადახდა";
+    }
+}
+// Lesson კლასის სხვა მეთოდები ...
 }
 ```
