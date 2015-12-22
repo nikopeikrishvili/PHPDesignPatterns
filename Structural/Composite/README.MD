@@ -6,4 +6,4 @@
 ამას ჩვენ გამოვიყენებთ შვილობილი კლასებისთვის რომელთაც უნდა ქონდეთ გარკვეული ფუნქციონალი
 
 </p>
-[img]http://i.imgur.com/96Davgc.png[/img]
+![alt tag](https://raw.github.com/nikopeikrishvili/PHPDesignPatterns/master/Structural/Composite/files/Composite_1.png)
